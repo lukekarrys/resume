@@ -5,6 +5,7 @@
   "author": "Luke Karrys <luke@lukekarrys.com>",
   "devDependencies": {
     "cpr": "^2.0.0",
+    "git-validate": "^2.2.2",
     "mkdirp": "^0.5.1",
     "resume-cli": "^0.4.14",
     "rimraf": "^2.5.4",
@@ -15,12 +16,16 @@
   ],
   "license": "MIT",
   "main": "resume.json",
+  "pre-commit": [
+    "test"
+  ],
   "private": true,
   "scripts": {
     "build": "resume export build/index.html --theme stackoverflow",
     "deploy": "surge --project build/ --domain resume.lukekarrys.com",
     "postbuild": "cpr build/index.html build/404.html",
     "prebuild": "rimraf build && mkdirp build",
-    "start": "resume serve --theme stackoverflow --dir build/"
+    "start": "resume serve --theme stackoverflow --dir build/",
+    "test": "resume test"
   }
 }
