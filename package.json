@@ -4,18 +4,23 @@
   "version": "1.0.0",
   "author": "Luke Karrys <luke@lukekarrys.com>",
   "devDependencies": {
+    "cpr": "^2.0.0",
     "mkdirp": "^0.5.1",
     "resume-cli": "^0.4.14",
+    "rimraf": "^2.5.4",
     "surge": "^0.18.0"
   },
   "keywords": [
     "resume"
   ],
   "license": "MIT",
-  "main": "index.js",
+  "main": "resume.json",
   "private": true,
   "scripts": {
-    "build": "mkdirp build && resume export build/index.html --theme stackoverflow",
-    "deploy": "surge --project build/ --domain resume.lukekarrys.com"
+    "build": "resume export build/index.html --theme stackoverflow",
+    "deploy": "surge --project build/ --domain resume.lukekarrys.com",
+    "postbuild": "cpr build/index.html build/404.html",
+    "prebuild": "rimraf build && mkdirp build",
+    "start": "resume serve --theme stackoverflow --dir build/"
   }
 }
