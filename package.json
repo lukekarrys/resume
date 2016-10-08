@@ -1,0 +1,21 @@
+{
+  "name": "resume",
+  "description": "My resume",
+  "version": "1.0.0",
+  "author": "Luke Karrys <luke@lukekarrys.com>",
+  "devDependencies": {
+    "mkdirp": "^0.5.1",
+    "resume-cli": "^0.4.14",
+    "surge": "^0.18.0"
+  },
+  "keywords": [
+    "resume"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "build": "mkdirp build && resume export build/index.html --theme stackoverflow",
+    "deploy": "surge --project build/ --domain resume.lukekarrys.com"
+  }
+}

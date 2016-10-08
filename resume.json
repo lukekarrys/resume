@@ -1,0 +1,133 @@
+{
+  "basics": {
+    "name": "Luke Karrys",
+    "label": "Programmer",
+    "picture": "https://andyet.com/images/team/lukelarge2x.jpg",
+    "email": "luke@lukekarrys.com",
+    "phone": "(480) 389-4575",
+    "website": "http://lukekarrys.com",
+    "summary": "TODO",
+    "location": {
+      "address": "759 West Haught Avenue",
+      "postalCode": "85541",
+      "city": "Payson",
+      "countryCode": "US",
+      "region": "Arizona"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "lukekarrys",
+        "url": "https://github.com/lukekarrys"
+      },
+      {
+        "network": "Blog",
+        "username": "lukecod.es",
+        "url": "http://lukecod.es"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "&yet",
+      "position": "JavaScript Developer",
+      "website": "https://andyet.com",
+      "startDate": "2013-01-01",
+      "summary": "Developed web applications for clients and internal use using Node and a variety of front-end technologies like React, Webpack, and ES2015.",
+      "highlights": [
+        "Led front-end development of multi-platform single page app for CAA music clients to plan and route worldwide tours",
+        "Led front-end development for the Node Security Platform public and admin interfaces",
+        "Wireframed and built front-end and application server for Heroku data vizualization to showcase Kafka support"
+      ]
+    },
+    {
+      "company": "meltmedia",
+      "position": "Front-End Developer",
+      "website": "https://meltmedia.com",
+      "startDate": "2011-02-01",
+      "endDate": "2013-01-01",
+      "summary": "",
+      "highlights": [
+        "Consolidated marketing sites to use a single front-end framework and shared plugins with require.js",
+        "Wrote plugins for multi-platform analytics, glossary word highlighting, and push state navigation for use across all sites"
+      ]
+    },
+    {
+      "company": "Jawa",
+      "position": "Web and Game Developer",
+      "startDate": "2010-02-01",
+      "endDate": "2011-02-01",
+      "summary": "",
+      "highlights": [
+        "Manage a team creating front-end templates for a large stable of MVC data driven sites with an emphasis in cross-browser compatibility and HTML view and CSS reuse",
+        "Work as a team member writing full stack code (PHP, HTML, CSS, JS) for MVC architected websites",
+        "Manage JIRA workflows to track bugs in development, staging and production environments",
+        "Engineer AS3 classes, PHP and JS to create an isometric Flash game for Facebook deployment",
+        "Create AS3 classes for use in a SWC game engine for current & future isometric Flash games"
+      ]
+    },
+    {
+      "company": "Mosaic Team",
+      "position": "Web Developer",
+      "startDate": "2008-12-01",
+      "endDate": "2010-02-01",
+      "summary": "",
+      "highlights": [
+        "Develop front and back end business solutions for the web both individually and as a team member",
+        "Communicate with coworkers, supervisors and clients about project goals and results",
+        "Skills used: PHP4/5, JavaScript, jQuery, Flex, Flash, AS2/3, MySQL, X/HTML, CSS 2/3, LAMP, MAMP, WordPress, Joomla, Photoshop, Coda, WHM, cPanel, AJAX"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Advancing Technology",
+      "area": "Software Engineering",
+      "studyType": "Bachelor",
+      "startDate": "2005-09-01",
+      "endDate": "2008-12-01",
+      "gpa": "3.73",
+      "courses": []
+    }
+  ],
+  "skills": [
+    {
+      "name": "Web Development",
+      "level": "Advanced",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "Javascript"
+      ]
+    },
+    {
+      "name": "Front-End Tooling",
+      "level": "Advanced",
+      "keywords": [
+        "webpack",
+        "gulp",
+        "grunt"
+      ]
+    },
+    {
+      "name": "CSS Processing",
+      "level": "Advanced",
+      "keywords": [
+        "postcss",
+        "less",
+        "sass"
+      ]
+    },
+    {
+      "name": "JS Frameworks",
+      "level": "Advanced",
+      "keywords": [
+        "react",
+        "backbone",
+        "ampersand"
+      ]
+    }
+  ],
+  "interests": [],
+  "references": []
+}
