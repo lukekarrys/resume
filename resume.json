@@ -21,7 +21,12 @@
         "url": "https://github.com/lukekarrys"
       },
       {
-        "network": "Blog",
+        "network": "archive",
+        "username": "lukekarrys",
+        "url": "http://npmjs.org/~lukekarrys"
+      },
+      {
+        "network": "rss-square",
         "username": "lukecod.es",
         "url": "http://lukecod.es"
       }
@@ -71,11 +76,11 @@
       "position": "Web Developer",
       "startDate": "2008-12-01",
       "endDate": "2010-02-01",
-      "summary": "",
+      "summary": "Developed front and back-end solutions for small business clients using PHP and JavaScript",
       "highlights": [
         "Develop front and back end business solutions for the web both individually and as a team member",
         "Communicate with coworkers, supervisors and clients about project goals and results",
-        "Skills used: PHP4/5, JavaScript, jQuery, Flex, Flash, AS2/3, MySQL, X/HTML, CSS 2/3, LAMP, MAMP, WordPress, Joomla, Photoshop, Coda, WHM, cPanel, AJAX"
+        "Skills used: PHP4/5, JavaScript, jQuery, Flex, Flash, AS2/3, MySQL, HTML, CSS 2/3, WordPress, Joomla, Photoshop"
       ]
     }
   ],
@@ -88,6 +93,14 @@
       "endDate": "2008-12-01",
       "gpa": "3.73",
       "courses": []
+    }
+  ],
+  "awards": [
+    {
+      "title": "Finalist",
+      "date": "2015-02-01",
+      "awarder": "Static Showdown",
+      "summary": "<a href='http://gifchess.club'>gifchess.club</a> – <a href='https://2015.staticshowdown.com/winners'>Static Showdown</a> – Chess combined with animated webcam GIFs. Built with Ampersand, LESS, and Firebase."
     }
   ],
   "skills": [
