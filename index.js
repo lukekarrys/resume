@@ -10,7 +10,7 @@ const compileCss = `require('sync-exec')('./node_modules/.bin/lessc ${minify} st
 // theme to be compiled manually
 const patchedTheme = theme
   .replace(/(resume\.hbs)/, `${themePath}/$1`)
-  .replace(/(var css = ).*/, `$1${compileCss}`)
+  .replace(/(var css = ).*/, `$1${compileCss.replace(/^@media print \{$[\s\S]+^\}$/m, '')}`)
 
 // eslint-disable-next-line no-eval
 eval(patchedTheme)
