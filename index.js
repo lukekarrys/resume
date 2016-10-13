@@ -10,7 +10,16 @@ const compileCss = `require('sync-exec')('./node_modules/.bin/lessc ${minify} st
 // theme to be compiled manually
 const patchedTheme = theme
   .replace(/(resume\.hbs)/, `${themePath}/$1`)
-  .replace(/(var css = ).*/, `$1${compileCss.replace(/^@media print \{$[\s\S]+^\}$/m, '')}`)
+  .replace(/(var )(css)( = ).*/, `
+    $1$2$3${compileCss}
+    let skip = null
+    $2 = $2.split('\\n').reduce((memo, line, lines) => {
+      if (line.indexOf('@media print') === 0 && skip === null) skip = true
+      if (line.indexOf('}') === 0 && skip === true) skip = false, line = ''
+      if (!skip) memo.push(line)
+      return memo
+    }, []).join('\\n')
+  `)
 
 // eslint-disable-next-line no-eval
 eval(patchedTheme)
