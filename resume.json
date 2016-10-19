@@ -7,8 +7,6 @@
     "website": "http://lukekarrys.com",
     "summary": "Luke is a Node.js and front-end developer who is at home anywhere in a project from the API to the UX. He received his Bachelor of Science degree in software Engineering from the University of Advancing Technology in Tempe, AZ. Lately he's found a stack of Hapi, Postgres, React, Babel, Webpack and CSS Modules to be a pretty nice fit for creating exceptional user experiences. Above all, he believes that software is about people.",
     "location": {
-      "address": "759 West Haught Avenue",
-      "postalCode": "85541",
       "city": "Payson",
       "countryCode": "US",
       "region": "Arizona"
