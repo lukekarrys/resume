@@ -13,6 +13,8 @@ const patchedTheme = theme
     $1$2
       .replace(/opacity:[10]/g, '')
       .replace(/<script>[\\s\\S]*<\\/script>/g, '')
+      .replace(/item display none/g, 'item display')
+      .replace(/fa-caret-down/g, 'fa-caret-right')
   `)
   .replace(/(var )(css)( = ).*/, `
     $1$2$3${compileCss}

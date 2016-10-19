@@ -6,6 +6,7 @@ const overwrite = (p, transform) => fs.writeFileSync(p, transform(fs.readFileSyn
 
 overwrite(path.resolve(__dirname, 'build', 'index.html'), (html) => minify(html, {
   collapseWhitespace: true,
+  conservativeCollapse: true,
   collapseBooleanAttributes: true,
   collapseInlineTagWhitespace: true,
   removeAttributeQuotes: true,
