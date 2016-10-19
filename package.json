@@ -33,7 +33,7 @@
   "private": true,
   "scripts": {
     "build": "NODE_ENV=production resume serve --theme stackoverflow --dir build/ --silent --port 9000 & PID=$!; echo $PID; sleep 1; curl -s http://localhost:9000 > /dev/null; kill -INT $PID;",
-    "deploy": "surge --project build/ --domain lukekarrysresume.surge.sh",
+    "deploy": "surge --project build/ --domain resume.surge.sh",
     "lint": "standard",
     "postbuild": "cpr build/index.html build/404.html",
     "prebuild": "rimraf build && mkdirp build",
