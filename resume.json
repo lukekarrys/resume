@@ -6,7 +6,7 @@
     "email": "luke@lukekarrys.com",
     "phone": "(480) 389-4575",
     "website": "http://lukekarrys.com",
-    "summary": "Luke is a Node.js and front-end developer who is at home anywhere in a project from the API to the UX. He received his bachelor of sciences degree in software enginerring from the University of Advancing Technology. Lately he's found a stack of Hapi, Postgres, React, Babel, Webpack and CSS Modules to be a pretty nice fit for creating exceptional user experiences. Above all, he belives that software is about people.",
+    "summary": "Luke is a Node.js and front-end developer who is at home anywhere in a project from the API to the UX. He received his Bachelor of Science degree in software Engineering from the University of Advancing Technology in Tempe, AZ. Lately he's found a stack of Hapi, Postgres, React, Babel, Webpack and CSS Modules to be a pretty nice fit for creating exceptional user experiences. Above all, he belives that software is about people.",
     "location": {
       "address": "759 West Haught Avenue",
       "postalCode": "85541",
@@ -38,12 +38,12 @@
       "position": "JavaScript Developer",
       "website": "https://andyet.com",
       "startDate": "2013-01-01",
-      "summary": "Developed web applications for clients and internal use using Node.js and a variety of front-end technologies like React, Webpack, and ES2015.",
+      "summary": "Developed web applications for clients and internally using Node.js and a variety of front-end technologies like React, Webpack, and ES2015.",
       "highlights": [
         "Led front-end development of multi-platform single page app for CAA's music clients to plan and route worldwide tours",
         "Developed the front-end and parts of the API for the Node Security Platform's public and admin interfaces",
-        "Wireframed and developed front-end and application server for Heroku data vizualization to showcase Kafka support",
-        "Created and maintained open source software that was used in client projects as well as by the public"
+        "Wireframed and developed front-end and application server for Heroku data vizualization to showcase Kafka addon",
+        "Created and maintained and extracted open source software from projects"
       ]
     },
     {
@@ -66,11 +66,10 @@
       "endDate": "2011-02-01",
       "summary": "Managed front-end development emphasizing code reuse and repeatable deployment patterns of 100+ marketing sites",
       "highlights": [
-        "Managed a team creating front-end templates for a large stable of MVC data driven sites with an emphasis in cross-browser compatibility and HTML view and CSS reuse",
-        "Work as a team member writing full stack code (PHP, HTML, CSS, JS) for MVC architected websites",
-        "Manage JIRA workflows to efficiently track projects in development, staging and production environments",
-        "Engineer AS3 classes, PHP and JS to create an isometric Flash game for deployment to Facebook",
-        "Create AS3 classes for reuse in a SWC game engine for current & future isometric Flash games"
+        "Managed a team creating front-end templates for a large stable of MVC data driven sites with an emphasis in cross-browser compatibility and HTML &amp; CSS reuse",
+        "Worked as a team member writing full stack code (PHP, HTML, CSS, JS) for MVC architected websites",
+        "Write custom tooling to ease developer experience in writing, managing, and deploying many concurrent projects",
+        "Develop game logic AS3 classes, PHP and JS to create a isometric Flash games for deployment to Facebook"
       ]
     },
     {
@@ -80,9 +79,9 @@
       "endDate": "2010-02-01",
       "summary": "Developed front and back-end solutions for small business clients using PHP and JavaScript",
       "highlights": [
-        "Develop front and back end business solutions for the web both individually and as a team member",
-        "Communicate with coworkers, supervisors and clients about project goals and results",
-        "Skills used: PHP4/5, JavaScript, jQuery, Flex, Flash, AS2/3, MySQL, HTML, CSS 2/3, WordPress, Joomla, Photoshop"
+        "Create custom season ticketing interface for local theatres to use",
+        "Create template editor for clients to customize sites for their small business",
+        "Communicate with coworkers, supervisors and clients about project goals and results"
       ]
     }
   ],
@@ -112,7 +111,7 @@
       "keywords": [
         "HTML",
         "CSS",
-        "Javascript"
+        "ES2015+"
       ]
     },
     {
@@ -139,7 +138,17 @@
       "keywords": [
         "react",
         "backbone",
-        "ampersand"
+        "ampersand",
+        "redux"
+      ]
+    },
+    {
+      "name": "Data Vizualization",
+      "level": "Advanced",
+      "keywords": [
+        "d3",
+        "animation",
+        "responsive"
       ]
     }
   ],
