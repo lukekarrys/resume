@@ -9,6 +9,11 @@ const compileCss = `require('sync-exec')('./node_modules/.bin/lessc style.less')
 // theme to be compiled manually
 const patchedTheme = theme
   .replace(/(resume\.hbs)/, `${themePath}/$1`)
+  .replace(/(var tpl = )(.*?)(;)/, `
+    $1$2
+      .replace(/opacity:[10]/g, '')
+      .replace(/<script>[\\s\\S]*<\\/script>/g, '')
+  `)
   .replace(/(var )(css)( = ).*/, `
     $1$2$3${compileCss}
     var skip = null
@@ -18,6 +23,7 @@ const patchedTheme = theme
       if (!skip) memo.push(line)
       return memo
     }, []).join('\\n')
+    $2 = $2.replace(/.*opacity:.*/g, '')
   `)
 
 // eslint-disable-next-line no-eval
