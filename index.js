@@ -2,8 +2,8 @@ const fs = require('fs')
 
 const themePath = 'node_modules/jsonresume-theme-stackoverflow'
 const theme = fs.readFileSync(`${themePath}/index.js`, 'utf-8')
-const minify = process.env.NODE_ENV === 'production' ? '--clean-css' : ''
-const compileCss = `require('sync-exec')('./node_modules/.bin/lessc ${minify} style.less').stdout`
+const minify = process.env.NODE_ENV === 'production'
+const compileCss = `require('sync-exec')('./node_modules/.bin/lessc style.less').stdout`
 
 // The theme will be run in the context of project directory, which requires
 // the template path to point back to the installed theme module and the patched
@@ -19,6 +19,7 @@ const patchedTheme = theme
       if (!skip) memo.push(line)
       return memo
     }, []).join('\\n')
+    $2 = ${minify ? 'require("cssmin")($2)' : '$2'}
   `)
 
 // eslint-disable-next-line no-eval
