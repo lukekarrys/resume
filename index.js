@@ -11,7 +11,7 @@ const patchedTheme = theme
   .replace(/(resume\.hbs)/, `${themePath}/$1`)
   .replace(/(var )(css)( = ).*/, `
     $1$2$3${compileCss}
-    let skip = null
+    var skip = null
     $2 = $2.split('\\n').reduce((memo, line, lines) => {
       if (line.indexOf('@media print') === 0 && skip === null) skip = true
       if (line.indexOf('}') === 0 && skip === true) skip = false, line = ''
