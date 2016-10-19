@@ -111,7 +111,8 @@
       "keywords": [
         "HTML",
         "CSS",
-        "ES2015+"
+        "ES2015+",
+        "Node"
       ]
     },
     {
@@ -120,7 +121,8 @@
       "keywords": [
         "webpack",
         "gulp",
-        "grunt"
+        "grunt",
+        "node"
       ]
     },
     {
