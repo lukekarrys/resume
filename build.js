@@ -16,5 +16,6 @@ overwrite(path.resolve(__dirname, 'build', 'index.html'), (html) => minify(html,
   removeStyleLinkTypeAttributes: true,
   useShortDoctype: true,
   quoteCharacter: "'",
-  minifyCSS: true
+  minifyCSS: true,
+  minifyJS: true
 }))
