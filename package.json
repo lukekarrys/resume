@@ -30,12 +30,13 @@
     "test",
     "lint"
   ],
+  "private": true,
   "repository": {
     "url": "git@github.com:lukekarrys/resume.git"
   },
-  "private": true,
   "scripts": {
-    "build": "NODE_ENV=production resume serve --theme stackoverflow --dir build/ --silent --port 9000 & PID=$!; sleep 1; curl -s http://localhost:9000 > /dev/null; kill -INT $PID;",
+    "build": "NODE_ENV=production npm start -- --silent --port 9000 & PID=$!; npm run capture; kill -INT $PID;",
+    "capture": "sleep 1; curl -s http://localhost:9000 > /dev/null",
     "codeship-deploy": "npm run deploy",
     "codeship-setup": "npm install && npm run build",
     "codeship-test": "npm run lint && npm run test",
