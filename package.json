@@ -41,7 +41,7 @@
     "codeship-test": "npm run lint && npm run test",
     "deploy": "git-directory-deploy --directory build --username lukekarrys --email lukekarrys@gmail.com --repo `cat package.json | json repository.url` --message='--skip-ci'",
     "lint": "standard",
-    "postbuild": "node build && cpr build/index.html build/404.html",
+    "postbuild": "node build && cpr build/index.html build/404.html && cpr assets build",
     "prebuild": "rimraf build/*.html",
     "start": "resume serve --theme stackoverflow --dir build/",
     "test": "resume test"
