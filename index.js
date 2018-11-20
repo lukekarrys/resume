@@ -1,22 +1,27 @@
-const fs = require('fs')
+const fs = require("fs");
 
-const themePath = 'node_modules/jsonresume-theme-stackoverflow'
-const theme = fs.readFileSync(`${themePath}/index.js`, 'utf-8')
-const compileCss = `require('sync-exec')('./node_modules/.bin/lessc style.less').stdout`
+const themePath = "node_modules/jsonresume-theme-stackoverflow";
+const theme = fs.readFileSync(`${themePath}/index.js`, "utf-8");
+const compileCss = `require('sync-exec')('./node_modules/.bin/lessc style.less').stdout`;
 
 // The theme will be run in the context of project directory, which requires
 // the template path to point back to the installed theme module and the patched
 // theme to be compiled manually
 const patchedTheme = theme
   .replace(/(resume\.hbs)/, `${themePath}/$1`)
-  .replace(/(var tpl = )(.*?)(;)/, `
+  .replace(
+    /(var tpl = )(.*?)(;)/,
+    `
     $1$2
       .replace(/opacity:[10]/g, '')
       .replace(/<script>[\\s\\S]*<\\/script>/g, "")
       .replace(/item display none/g, 'item display')
       .replace(/fa-caret-down/g, 'fa-caret-right')
-  `)
-  .replace(/(var )(css)( = ).*/, `
+  `
+  )
+  .replace(
+    /(var )(css)( = ).*/,
+    `
     $1$2$3${compileCss}
     var skip = null
     $2 = $2.split('\\n').reduce((memo, line, lines) => {
@@ -26,7 +31,8 @@ const patchedTheme = theme
       return memo
     }, []).join('\\n')
     $2 = $2.replace(/.*opacity:.*/g, '')
-  `)
+  `
+  );
 
 // eslint-disable-next-line no-eval
-eval(patchedTheme)
+eval(patchedTheme);

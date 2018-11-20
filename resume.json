@@ -5,9 +5,9 @@
     "picture": "profile.jpg",
     "email": "luke@lukekarrys.com",
     "website": "http://lukekarrys.com",
-    "summary": "Luke is a Node.js and front-end developer who is at home anywhere in a project from the API to the UX. He received his Bachelor of Science degree in software Engineering from the University of Advancing Technology in Tempe, AZ. Lately he's found a stack of Hapi, Postgres, React, Babel, Webpack and CSS Modules to be a pretty nice fit for creating exceptional user experiences. Above all, he believes that software is about people.",
+    "summary": "I'm is a Node.js and front-end developer who is at home anywhere in a project anywhere from the API to the UX. I received my Bachelor of Science degree in software Engineering from the University of Advancing Technology in Tempe, AZ. Lately I've found a stack of Hapi, Postgres, React, Babel, Webpack and CSS Modules to be a pretty nice fit for creating exceptional user experiences. Above all, I believe that software is about people.",
     "location": {
-      "city": "Payson",
+      "city": "Gilbert",
       "countryCode": "US",
       "region": "Arizona"
     },
@@ -98,69 +98,50 @@
       "title": "Finalist",
       "date": "2015-02-01",
       "awarder": "Static Showdown",
-      "summary": "<a href='https://gifchessclub.surge.sh'>gifchess.club</a> – <a href='https://2015.staticshowdown.com/winners'>Static Showdown</a> – Chess combined with animated webcam GIFs. Built with Ampersand, LESS, and Firebase."
+      "summary": "<a href='https://github.com/lukekarrys/gifchess.club'>gifchess.club</a> – <a href='https://2015.staticshowdown.com/winners'>Static Showdown</a> – Chess combined with animated webcam GIFs. Built with Ampersand, LESS, and Firebase."
     }
   ],
   "skills": [
     {
       "name": "Web Development",
       "level": "Advanced",
-      "keywords": [
-        "HTML",
-        "CSS",
-        "ES2015+",
-        "Node"
-      ]
+      "keywords": ["HTML", "CSS", "ES2015+", "Node"]
     },
     {
       "name": "Front-End Tooling",
       "level": "Advanced",
-      "keywords": [
-        "webpack",
-        "gulp",
-        "grunt",
-        "node"
-      ]
+      "keywords": ["webpack", "gulp", "grunt", "node"]
     },
     {
       "name": "Hosting",
       "level": "Advanced",
-      "keywords": [
-        "heroku",
-        "firebase",
-        "digitalocean",
-        "surge"
-      ]
+      "keywords": ["heroku", "firebase", "digitalocean", "surge"]
     },
     {
       "name": "CSS Processing",
       "level": "Advanced",
-      "keywords": [
-        "postcss",
-        "less",
-        "sass"
-      ]
+      "keywords": ["postcss", "less", "sass"]
     },
     {
       "name": "JS Frameworks",
       "level": "Advanced",
-      "keywords": [
-        "react",
-        "backbone",
-        "ampersand",
-        "redux"
-      ]
+      "keywords": ["react", "backbone", "jquery", "redux"]
     },
     {
       "name": "Data Visualization",
       "level": "Advanced",
-      "keywords": [
-        "d3",
-        "animation",
-        "responsive"
-      ]
+      "keywords": ["d3", "animation", "responsive"]
     }
   ],
-  "interests": [],
+  "interests": [
+    {
+      "name": "Running",
+      "keywords": ["Road Running", "Trail Running", "Browsing Ultrasignup"]
+    },
+    {
+      "name": "Outdoors",
+      "keywords": ["Hiking", "Camping", "Browsing REI Outlet"]
+    }
+  ],
   "references": []
 }

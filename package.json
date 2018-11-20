@@ -16,6 +16,7 @@
     "git-directory-deploy": "^1.5.1",
     "git-validate": "^2.2.2",
     "json": "^9.0.6",
+    "prettier": "^1.15.2",
     "standard": "^10.0.2"
   },
   "engines": {
@@ -41,7 +42,7 @@
     "codeship-setup": "npm install && npm run build",
     "codeship-test": "npm run lint && npm run test",
     "deploy": "git-directory-deploy --directory build --username lukekarrys --email lukekarrys@gmail.com --repo `cat package.json | json repository.url` --message='--skip-ci'",
-    "lint": "standard",
+    "lint": "prettier --write '**/*.{js,md,css,json}'",
     "postbuild": "node build && cpr build/index.html build/404.html && cpr assets build",
     "prebuild": "rimraf build",
     "start": "resume serve --theme stackoverflow --dir build/",
