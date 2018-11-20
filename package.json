@@ -7,7 +7,7 @@
     "cpr": "^3.0.1",
     "html-minifier": "^3.5.1",
     "jsonresume-theme-stackoverflow": "1.0.4",
-    "less": "^2.7.2",
+    "less": "^3.8.1",
     "resume-cli": "^1.1.2",
     "rimraf": "^2.6.1",
     "sync-exec": "^0.6.2"
