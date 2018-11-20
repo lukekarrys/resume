@@ -113,9 +113,9 @@
       "keywords": ["webpack", "gulp", "grunt", "node"]
     },
     {
-      "name": "Hosting",
+      "name": "Hosting / CI",
       "level": "Advanced",
-      "keywords": ["heroku", "firebase", "digitalocean", "surge"]
+      "keywords": ["heroku", "firebase", "digitalocean", "surge", "travis"]
     },
     {
       "name": "CSS Processing",
