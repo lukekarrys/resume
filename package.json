@@ -8,7 +8,7 @@
     "html-minifier": "^3.5.1",
     "jsonresume-theme-stackoverflow": "1.0.4",
     "less": "^2.7.2",
-    "resume-cli": "^0.4.19",
+    "resume-cli": "^1.1.2",
     "rimraf": "^2.6.1",
     "sync-exec": "^0.6.2"
   },
@@ -16,8 +16,7 @@
     "git-directory-deploy": "^1.5.1",
     "git-validate": "^2.2.2",
     "json": "^9.0.6",
-    "prettier": "^1.15.2",
-    "standard": "^10.0.2"
+    "prettier": "^1.15.2"
   },
   "engines": {
     "node": "^8.8.1"
