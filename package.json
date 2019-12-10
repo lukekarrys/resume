@@ -36,7 +36,7 @@
   },
   "scripts": {
     "build": "NODE_ENV=production npm start -- --silent --port 9000 & PID=$!; npm run capture; kill -INT $PID;",
-    "capture": "sleep 1; curl -s http://localhost:9000 > /dev/null",
+    "capture": "sleep 5; curl -s http://localhost:9000 > /dev/null",
     "lint": "prettier --write '**/*.{js,md,css,json}'",
     "lint:ci": "npm run lint -- --list-different",
     "postbuild": "node build && cpr build/index.html build/404.html && cpr assets build",
