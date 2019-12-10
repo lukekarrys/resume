@@ -8,10 +8,9 @@ npm start
 # Edit resume.json or style.less
 ```
 
-**Build and Deploy**
+**Build**
 
 ```sh
 npm install
 npm run build
-npm run deploy
 ```

@@ -14,7 +14,6 @@
     "sync-exec": "^0.6.2"
   },
   "devDependencies": {
-    "git-directory-deploy": "^1.5.1",
     "git-validate": "^2.2.2",
     "json": "^9.0.6",
     "prettier": "^1.15.2"
@@ -38,10 +37,6 @@
   "scripts": {
     "build": "NODE_ENV=production npm start -- --silent --port 9000 & PID=$!; npm run capture; kill -INT $PID;",
     "capture": "sleep 1; curl -s http://localhost:9000 > /dev/null",
-    "codeship-deploy": "npm run deploy",
-    "codeship-setup": "npm install && npm run build",
-    "codeship-test": "npm run lint:ci && npm run test",
-    "deploy": "git-directory-deploy --directory build --username lukekarrys --email lukekarrys@gmail.com --repo `cat package.json | json repository.url` --message='--skip-ci'",
     "lint": "prettier --write '**/*.{js,md,css,json}'",
     "lint:ci": "npm run lint -- --list-different",
     "postbuild": "node build && cpr build/index.html build/404.html && cpr assets build",
