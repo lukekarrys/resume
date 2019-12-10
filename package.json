@@ -8,7 +8,7 @@
     "html-minifier": "^3.5.1",
     "jsonresume-theme-stackoverflow": "1.0.4",
     "less": "^3.8.1",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.13",
     "resume-cli": "^1.1.2",
     "rimraf": "^2.6.1",
     "sync-exec": "^0.6.2"
