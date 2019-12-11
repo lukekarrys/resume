@@ -35,8 +35,7 @@
     "url": "git@github.com:lukekarrys/resume.git"
   },
   "scripts": {
-    "build": "NODE_ENV=production npm start -- --silent --port 9000 & PID=$!; echo $PID; npm run capture; echo $PID; kill -INT $PID;",
-    "capture": "sleep 5; curl -s http://localhost:9000 > /dev/null",
+    "build": "./build.sh",
     "lint": "prettier --write '**/*.{js,md,css,json}'",
     "lint:ci": "npm run lint -- --list-different",
     "postbuild": "node build && cpr build/index.html build/404.html && cpr assets build",
