@@ -38,10 +38,7 @@
     "build": "./build.sh",
     "lint": "prettier --write '**/*.{js,md,css,json}'",
     "lint:ci": "npm run lint -- --list-different",
-    "postbuild": "node build && cpr build/index.html build/404.html && cpr assets build",
-    "prebuild": "rimraf build",
-    "prestart": "node resume.js",
-    "start": "resume serve --theme stackoverflow --dir build/",
+    "start": "node resume.js && resume serve --theme stackoverflow --dir build/",
     "test": "resume test"
   }
 }
