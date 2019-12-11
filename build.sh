@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-NODE_ENV=production npm start -- --silent --port 9000 & PID=$!
+NODE_ENV=production ./node_modules/.bin/resume serve --theme stackoverflow --dir build/ --silent --port 9000 & PID=$!
 echo "Server is $PID"
 
 sleep 2
