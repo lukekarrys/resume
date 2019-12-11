@@ -15,5 +15,5 @@ else
 fi
 
 echo "Kill $PID"
-killall $PID
+kill -9 $PID
 kill -INT $PID
