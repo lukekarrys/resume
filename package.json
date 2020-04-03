@@ -11,6 +11,7 @@
     "delete": "^1.1.0",
     "git-validate": "^2.2.2",
     "html-minifier": "^4.0.0",
+    "if-env": "^1.0.4",
     "marked": "^0.8.2",
     "micro": "^9.3.4",
     "mkdirp": "^1.0.3",
@@ -43,7 +44,7 @@
     "build": "npm run build:markdown && npm run build:css && npm run build:pdf",
     "build:css": "postcss src/styles.css -o build/styles.css",
     "build:markdown": "node build.js",
-    "build:pdf": "node pdf.js",
+    "build:pdf": "if-env NETLIFY=true && echo 'Dont generate PDFs on Linux' || node pdf.js",
     "lint": "prettier --write '**/*.{js,md,css,json}'",
     "lint:ci": "npm run lint -- --list-different",
     "start": "nodemon --exec 'npm run build' -e 'js,md,html,css' --ignore build"
