@@ -34,7 +34,7 @@ Above all, I believe that software is about people.
 
 #### Developed web applications for clients and internally using Node.js and a variety of front-end technologies
 
-- Architected and developed migration of a SaaS pricing application from jQuery to React
+- Architected and developed migration of Heroku's pricing application from jQuery to React
 - Led native development and deployment of realtime video + chat for prototype social network
 - Led front-end development of multi-platform web application for CAA's music clients to plan and route worldwide tours
 - Developed the front-end and API for the Node Security Platform's public and admin interfaces
@@ -70,7 +70,7 @@ Above all, I believe that software is about people.
 
 #### Managed front-end development emphasizing code reuse and repeatable development and deployment patterns for 100+ marketing sites
 
-- Managed a team creating front-end templates for a large stable of MVC data driven sites with an emphasis in cross-browser compatibility and HTML &amp; CSS reuse
+- Managed a team creating front-end templates for a large stable of MVC data driven sites
 - Worked as a team member writing full stack code (PHP, HTML, CSS, JS) for MVC websites
 - Wrote custom tooling to ease developer experience in writing, managing, and deploying many concurrent projects
 - Developed game logic AS3 classes, PHP and JS to create a isometric Flash games for deployment to Facebook
