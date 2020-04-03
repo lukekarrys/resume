@@ -9,6 +9,18 @@
   @apply py-4;
 }
 
+@media print {
+  #resume {
+    @apply m-0;
+    @apply p-0;
+    @apply w-auto;
+  }
+
+  @page {
+    margin: 1cm 1.4cm;
+  }
+}
+
 a,
 a:visited {
   @apply border-b-2;
@@ -83,3 +95,5 @@ ul {
 .skills + h4 {
   @apply mt-0;
 }
+
+

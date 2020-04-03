@@ -20,7 +20,7 @@ Above all, I believe that software is about people.
 
 <div class="skills">
 
-- JavaScript
+- JavaScript/TypeScript
 - (Post)CSS
 - React/Redux
 - Node
@@ -72,7 +72,7 @@ Above all, I believe that software is about people.
 
 - Managed a team creating front-end templates for a large stable of MVC data driven sites
 - Worked as a team member writing full stack code (PHP, HTML, CSS, JS) for MVC websites
-- Wrote custom tooling to ease developer experience in writing, managing, and deploying many concurrent projects
+- Wrote custom tooling to ease developer experience in writing, managing, and deploying projects
 - Developed game logic AS3 classes, PHP and JS to create a isometric Flash games for deployment to Facebook
 
 ### Web Developer – Mosaic Team – Dec 2008-Feb 2010
