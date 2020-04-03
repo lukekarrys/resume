@@ -36,7 +36,7 @@ Above all, I believe that software is about people.
 
 - Architected and developed migration of Heroku's pricing application from jQuery to React
 - Led native development and deployment of realtime video + chat for prototype social network
-- Led front-end development of multi-platform web application for CAA's music clients to plan and route worldwide tours
+- Led front-end development of multi-platform web app for CAA's music clients to route worldwide tours
 - Developed the front-end and API for the Node Security Platform's public and admin interfaces
 
 ### Front-end Developer – [meltmedia](https://meltmedia.com) – Feb 2011-Jan 2013
@@ -53,7 +53,7 @@ Above all, I believe that software is about people.
 #### Developed front-end solutions for multiple teams creating marketing sites for Genentech and other clients
 
 - Consolidated marketing sites to use a single front-end framework and shared plugins with require.js
-- Wrote plugins for multi-platform analytics, glossary word highlighting, and push state navigation for use across all sites
+- Wrote general use plugins for multi-platform analytics, glossary word highlighting, and push state navigation
 - Researched and prototyped a multi-choice quiz application using JavaScript to replace a legacy Flash solution
 
 ### Web/Game Developer – Jawa – Feb 2010-Feb 2011
