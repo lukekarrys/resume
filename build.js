@@ -20,19 +20,16 @@ const PROD = process.env.NODE_ENV === "production"
 const BUILD = path.join(__dirname, "build")
 const SRC = path.join(__dirname, "src")
 
+const ifCond = (cond, fn) => (value) => (cond ? fn(value) : value)
+
 const mdToHtml = async (name) => {
   const template = await fs.readFile(path.join(SRC, "template.html"), "utf8")
   const markdown = marked(await fs.readFile(path.join(SRC, name), "utf8"))
   return template.replace("<!--MARKDOWN-->", markdown)
 }
 
-const devCacheBust = (value) =>
-  PROD
-    ? value.replace(
-        /(styles\.css)/,
-        `$1?v=${Math.random().toString().slice(2)}`
-      )
-    : value
+const cacheBust = (value) =>
+  value.replace(/(styles\.css)/, `$1?v=${Math.random().toString().slice(2)}`)
 
 const orphans = (value) => value.replace(/\s([\w\.]+)(<\/li>)/g, "&nbsp;$1$2")
 
@@ -49,8 +46,8 @@ const main = async () => {
   await Promise.all(
     markdownFiles.map((name) =>
       mdToHtml(name)
-        .then(devCacheBust)
-        .then(minify)
+        .then(ifCond(!PROD, cacheBust))
+        .then(ifCond(PROD, minify))
         .then(orphans)
         .then((value) => writeFile(name.replace(/\.md$/, ".html"), value))
     )

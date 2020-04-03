@@ -1,3 +1,5 @@
+const PROD = process.env.NODE_ENV === "production"
+
 module.exports = {
   plugins: [
     require("postcss-import"),
@@ -14,8 +16,9 @@ module.exports = {
       content: ["./build/**/*.html"],
       defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
     }),
-    require("cssnano")({
-      preset: "default",
-    }),
-  ],
+    PROD &&
+      require("cssnano")({
+        preset: "default",
+      }),
+  ].filter(Boolean),
 }
