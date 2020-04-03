@@ -6,11 +6,11 @@ Mesa, AZ – [1-480-389-4575](tel:14803894575) – [luke@lukekarrys.com](mailto:
 
 ## Web Application Developer
 
-I'm a web app developer who is at home anywhere in a project from the API to the UX. I enjoy diving deep into problems and coming up with solutions that weigh all the tradeoffs and commit to the best path forward.
+I'm a web app developer who is at home anywhere in a project from the API to the UX. I enjoy diving deep into problems as part of a team and coming up with solutions that weigh all the tradeoffs and commit to the best path forward.
 
-I'm happy with React and Node for building great web apps, but I'm open to any technology that allows me to create exceptional user experiences.
+My goal is to find a position that allows me to be creative and share my experience while continuing to learn and grow as a developer and person.
 
-I've worked remotely for over 8 years and pride myself on my diligent written and verbal communication.
+I'm happy with React and Node for building great web apps, but I'm open to any technology that allows me to create exceptional user experiences. I believe no detail is too small to try and get right. I've worked as a member of a distributed team for over 8 years and pride myself on my teamwork and diligent written and verbal communication.
 
 Above all, I believe that software is about people.
 
