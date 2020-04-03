@@ -94,6 +94,6 @@ Above all, I believe that software is about people.
 
 ## Education
 
-### University of Advancing Technology
+### University of Advancing Technology – Sep 2005-Dec 2008
 
-#### BSci (CL) in Software Engineering (Sep 2005-Dec 2008)
+#### Bachelor of Science (Cum Ladue) in Software Engineering with an emphasis in Web Programming
