@@ -11,7 +11,7 @@ module.exports = {
       stage: 3,
     }),
     require("@fullhuman/postcss-purgecss")({
-      content: ["./build/index.html"],
+      content: ["./build/**/*.html"],
       defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
     }),
     require("cssnano")({

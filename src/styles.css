@@ -2,7 +2,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-#resume {
+body {
   @apply max-w-screen-md;
   @apply mx-auto;
   @apply px-2;
@@ -10,14 +10,11 @@
 }
 
 @media print {
-  #resume {
+  body {
     @apply m-0;
     @apply p-0;
-    @apply w-auto;
-  }
-
-  @page {
-    margin: 1cm 1.4cm;
+    @apply max-w-none;
+    -webkit-print-color-adjust: exact;
   }
 }
 
@@ -57,7 +54,8 @@ h2 + h3 {
   @apply mt-3;
 }
 
-h3 a {
+h3 a,
+h3 a:visited {
   @apply border-yellow;
 }
 
@@ -95,5 +93,3 @@ ul {
 .skills + h4 {
   @apply mt-0;
 }
-
-
