@@ -1,9 +1,3 @@
-# Luke Karrys
-
-Mesa, AZ – [1-480-389-4575](tel:14803894575) – [luke@lukekarrys.com](mailto:luke@lukekarrys.com)
-
-[lukekarrys.com](https://lukekarrys.com) – [GitHub](https://github.com/lukekarrys) – [Blog](https://lukecod.es)
-
 ## Web Application Developer
 
 I'm a web app developer who is at home anywhere in a project from the API to the UX. I enjoy diving deep into problems as part of a team and coming up with solutions that weigh all the tradeoffs and commit to the best path forward.

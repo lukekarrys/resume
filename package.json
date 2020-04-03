@@ -3,17 +3,20 @@
   "description": "My resume",
   "version": "1.0.0",
   "author": "Luke Karrys <luke@lukekarrys.com>",
-  "dependencies": {},
+  "dependencies": {
+    "tailwindcss": "^1.2.0"
+  },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.0",
     "autoprefixer": "^9.7.5",
     "cssnano": "^4.1.10",
-    "delete": "^1.1.0",
+    "detect-port-alt": "^1.1.6",
     "git-validate": "^2.2.2",
     "html-minifier": "^4.0.0",
     "marked": "^0.8.2",
     "micro": "^9.3.4",
     "mkdirp": "^1.0.3",
+    "npm-run-all": "^4.1.5",
     "playwright": "^0.12.1",
     "postcss": "^7.0.27",
     "postcss-cli": "^7.1.0",
@@ -21,8 +24,7 @@
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.0.2",
-    "serve-handler": "^6.1.2",
-    "tailwindcss": "^1.2.0"
+    "serve-handler": "^6.1.2"
   },
   "keywords": [
     "resume"
@@ -40,12 +42,15 @@
     "url": "git@github.com:lukekarrys/resume.git"
   },
   "scripts": {
-    "build": "npm run build:markdown && npm run build:css && npm run build:pdf",
+    "build": "npm-run-all -s build:markdown build:css",
     "build:css": "postcss src/styles.css -o build/styles.css",
     "build:markdown": "node build.js",
     "build:pdf": "node pdf.js",
     "lint": "prettier --write '**/*.{js,md,css,json}'",
     "lint:ci": "npm run lint -- --list-different",
-    "start": "nodemon --exec 'npm run build' -e 'js,md,html,css' --ignore build"
+    "start": "npm-run-all -p start:**",
+    "start:server": "node server.js build",
+    "start:livereload": "livereload build",
+    "start:nodemon": "nodemon --exec 'npm run build' -e 'js,md,html,css' --ignore build"
   }
 }

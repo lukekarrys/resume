@@ -1,22 +1,13 @@
-const http = require("http")
-const micro = require("micro")
 const path = require("path")
 const fs = require("fs").promises
-const handler = require("serve-handler")
 const playwright = require("playwright")
-const del = require("delete")
+const detect = require("detect-port-alt")
+const { createServer, PORT } = require("./server")
 
 const BUILD = path.join(__dirname, "build")
-const PORT = 3000
 
-const createServer = () => {
-  const server = micro((...args) => handler(...args, { public: BUILD }))
-  server.listen(PORT)
-  return () => server.close()
-}
-
-const savePdf = async (page, name) => {
-  await page.goto(`http://localhost:${PORT}/${name}`)
+const savePdf = async (port, page, name) => {
+  await page.goto(`http://localhost:${port}/${name}`)
   await page.pdf({
     path: path.join(BUILD, `${path.basename(name, ".html")}.pdf`),
     printBackground: true,
@@ -31,15 +22,16 @@ const savePdf = async (page, name) => {
 }
 
 const main = async () => {
-  await del(path.join(BUILD, "*.pdf"))
   const files = (await fs.readdir(BUILD)).filter(
     (p) => path.extname(p) === ".html"
   )
-  const stopServer = createServer()
+  const port = await detect(PORT)
+  const unoccupiedPort = port === PORT
+  const stopServer = unoccupiedPort && createServer(PORT, BUILD)
   const browser = await playwright.chromium.launch()
 
   const cleanup = async () => {
-    stopServer()
+    stopServer && stopServer()
     await browser.close()
   }
 
@@ -47,7 +39,7 @@ const main = async () => {
     const context = await browser.newContext()
     const page = await context.newPage()
     for (const file of files) {
-      await savePdf(page, file)
+      await savePdf(PORT, page, file)
     }
     cleanup()
   } catch (e) {

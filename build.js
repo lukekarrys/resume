@@ -2,7 +2,6 @@ const fs = require("fs").promises
 const path = require("path")
 const marked = require("marked")
 const mkdirp = require("mkdirp")
-const del = require("delete").promise
 const { minify: htmlMinify } = require("html-minifier")
 
 marked.setOptions({
@@ -22,10 +21,13 @@ const SRC = path.join(__dirname, "src")
 
 const ifCond = (cond, fn) => (value) => (cond ? fn(value) : value)
 
+const readSrcFile = (f) => fs.readFile(path.join(SRC, f), "utf8")
+
 const mdToHtml = async (name) => {
-  const template = await fs.readFile(path.join(SRC, "template.html"), "utf8")
-  const markdown = marked(await fs.readFile(path.join(SRC, name), "utf8"))
-  return template.replace("<!--MARKDOWN-->", markdown)
+  const template = await readSrcFile("template.html")
+  const header = marked(await readSrcFile("_header.md"))
+  const content = marked(await readSrcFile(name))
+  return template.replace("<!--MARKDOWN-->", header + content)
 }
 
 const cacheBust = (value) =>
@@ -35,19 +37,25 @@ const orphans = (value) => value.replace(/\s([\w\.]+)(<\/li>)/g, "&nbsp;$1$2")
 
 const minify = (value) => htmlMinify(value, { collapseWhitespace: true })
 
+const liveReload = (value) =>
+  value.replace(
+    "</body>",
+    `<script>document.write('<script src="http://'+(location.host||"localhost").split(":")[0]+':35729/livereload.js?snipver=1"></'+"script>")</script></body>`
+  )
+
 const writeFile = (name, value) => fs.writeFile(path.join(BUILD, name), value)
 
 const main = async () => {
   await mkdirp(BUILD)
-  await del(path.join(BUILD, "*.html"))
   const markdownFiles = (await fs.readdir(SRC)).filter(
-    (p) => path.extname(p) === ".md"
+    (p) => path.extname(p) === ".md" && !path.basename(p).startsWith("_")
   )
   await Promise.all(
     markdownFiles.map((name) =>
       mdToHtml(name)
         .then(ifCond(!PROD, cacheBust))
         .then(ifCond(PROD, minify))
+        .then(ifCond(!PROD, liveReload))
         .then(orphans)
         .then((value) => writeFile(name.replace(/\.md$/, ".html"), value))
     )
