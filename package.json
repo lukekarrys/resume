@@ -3,23 +3,22 @@
   "description": "My resume",
   "version": "1.0.0",
   "author": "Luke Karrys <luke@lukekarrys.com>",
-  "dependencies": {
-    "cpr": "^3.0.1",
-    "html-minifier": "^3.5.1",
-    "jsonresume-theme-stackoverflow": "1.0.4",
-    "less": "^3.8.1",
-    "lodash": "^4.17.11",
-    "resume-cli": "^1.1.2",
-    "rimraf": "^2.6.1",
-    "sync-exec": "^0.6.2"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.0",
+    "autoprefixer": "^9.7.5",
+    "cssnano": "^4.1.10",
     "git-validate": "^2.2.2",
-    "json": "^9.0.6",
-    "prettier": "^1.15.2"
-  },
-  "engines": {
-    "node": "^8.8.1"
+    "html-minifier": "^4.0.0",
+    "marked": "^0.8.2",
+    "mkdirp": "^1.0.3",
+    "postcss": "^7.0.27",
+    "postcss-cli": "^7.1.0",
+    "postcss-flexbugs-fixes": "^4.2.0",
+    "postcss-import": "^12.0.1",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.0.2",
+    "tailwindcss": "^1.2.0"
   },
   "keywords": [
     "resume"
@@ -27,18 +26,21 @@
   "license": "MIT",
   "main": "index.js",
   "pre-commit": [
-    "test",
     "lint:ci"
   ],
+  "prettier": {
+    "semi": false
+  },
   "private": true,
   "repository": {
     "url": "git@github.com:lukekarrys/resume.git"
   },
   "scripts": {
-    "build": "./build.sh",
+    "build": "npm run build:markdown && npm run build:css",
+    "build:css": "postcss src/styles.css -o build/styles.css",
+    "build:markdown": "node build.js",
     "lint": "prettier --write '**/*.{js,md,css,json}'",
     "lint:ci": "npm run lint -- --list-different",
-    "start": "node resume.js && resume serve --theme stackoverflow --dir build/",
-    "test": "resume test"
+    "start": "nodemon --exec 'npm run build' -e 'js,md,html,css' --ignore build"
   }
 }
