@@ -11,8 +11,9 @@
     "autoprefixer": "^9.7.5",
     "cssnano": "^4.1.10",
     "detect-port-alt": "^1.1.6",
-    "git-validate": "^2.2.2",
     "html-minifier": "^4.0.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.1.1",
     "marked": "^0.8.2",
     "micro": "^9.3.4",
     "mkdirp": "^1.0.3",
@@ -26,14 +27,22 @@
     "prettier": "^2.0.2",
     "serve-handler": "^6.1.2"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "keywords": [
     "resume"
   ],
   "license": "MIT",
+  "lint-staged": {
+    "*.{js,css,md,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
   "main": "index.js",
-  "pre-commit": [
-    "lint:ci"
-  ],
   "prettier": {
     "semi": false
   },
@@ -49,8 +58,8 @@
     "lint": "prettier --write '**/*.{js,md,css,json}'",
     "lint:ci": "npm run lint -- --list-different",
     "start": "npm-run-all -p start:**",
-    "start:server": "node server.js build",
     "start:livereload": "livereload build",
-    "start:nodemon": "nodemon --exec 'npm run build' -e 'js,md,html,css' --ignore build"
+    "start:nodemon": "nodemon --exec 'npm run build' -e 'js,md,html,css' --ignore build",
+    "start:server": "node server.js build"
   }
 }
