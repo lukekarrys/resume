@@ -38,8 +38,7 @@
   "license": "MIT",
   "lint-staged": {
     "*.{js,md,css,json,html}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   },
   "main": "index.js",
