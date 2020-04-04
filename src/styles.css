@@ -93,3 +93,13 @@ ul {
 .skills + h4 {
   @apply mt-0;
 }
+
+hr {
+  @apply border-4;
+  @apply bg-cyan;
+  @apply rounded;
+  @apply border-cyan;
+  @apply mt-8;
+  @apply mb-4;
+  @apply p-1;
+}
