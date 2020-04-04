@@ -72,7 +72,7 @@ p + p {
 ul {
   @apply list-disc;
   @apply list-outside;
-  @apply pl-2;
+  @apply pl-4;
   @apply text-sm;
 }
 
@@ -80,6 +80,7 @@ ul {
   @apply flex;
   @apply flex-wrap;
   @apply list-none;
+  @apply p-0;
 }
 
 .skills ul li {
