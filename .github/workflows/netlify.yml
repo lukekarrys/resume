@@ -21,10 +21,7 @@ jobs:
       - run: npm run build --if-present
 
       - name: Deploy to netlify
-        uses: netlify/actions/cli@master
+        run: netlify deploy --dir=build --prod
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_APP_ID }}
-        with:
-          args: deploy --dir=build --prod
-          secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_APP_ID"]'
