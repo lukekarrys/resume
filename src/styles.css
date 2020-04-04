@@ -99,7 +99,7 @@ hr {
   @apply bg-cyan;
   @apply rounded;
   @apply border-cyan;
-  @apply mt-8;
+  @apply mt-4;
   @apply mb-4;
   @apply p-1;
 }

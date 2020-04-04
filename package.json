@@ -37,7 +37,7 @@
   ],
   "license": "MIT",
   "lint-staged": {
-    "*.{js,css,md,json}": [
+    "*.{js,md,css,json,html}": [
       "prettier --write",
       "git add"
     ]
@@ -55,7 +55,7 @@
     "build:css": "postcss src/styles.css -o build/styles.css",
     "build:markdown": "node build.js",
     "build:pdf": "node pdf.js",
-    "lint": "prettier --write '**/*.{js,md,css,json}'",
+    "lint": "prettier --write '**/*.{js,md,css,json,html}'",
     "lint:ci": "npm run lint -- --list-different",
     "start": "npm-run-all -p start:**",
     "start:livereload": "livereload build",
