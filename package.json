@@ -50,7 +50,7 @@
     "url": "git@github.com:lukekarrys/resume.git"
   },
   "scripts": {
-    "build": "npm-run-all -s build:markdown build:css",
+    "build": "npm-run-all -s build:markdown build:css build:pdf",
     "build:css": "postcss src/styles.css -o build/styles.css",
     "build:markdown": "node build.js",
     "build:pdf": "node pdf.js",
