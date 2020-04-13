@@ -26,6 +26,7 @@
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.0.2",
+    "rimraf": "^3.0.2",
     "serve-handler": "^6.1.2"
   },
   "husky": {
@@ -51,7 +52,8 @@
     "url": "git@github.com:lukekarrys/resume.git"
   },
   "scripts": {
-    "build": "npm-run-all -s build:markdown build:css build:pdf",
+    "build": "npm-run-all -s build:clean build:markdown build:css build:pdf",
+    "build:clean": "rimraf build/",
     "build:css": "postcss src/styles.css -o build/styles.css",
     "build:markdown": "node build.js",
     "build:pdf": "node pdf.js",
