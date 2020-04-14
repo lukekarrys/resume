@@ -4,6 +4,8 @@
   "version": "1.0.0",
   "author": "Luke Karrys <luke@lukekarrys.com>",
   "dependencies": {
+    "gray-matter": "^4.0.2",
+    "lodash": "^4.17.15",
     "tailwindcss": "^1.2.0"
   },
   "devDependencies": {

@@ -2,6 +2,8 @@ const fs = require("fs").promises
 const path = require("path")
 const marked = require("marked")
 const mkdirp = require("mkdirp")
+const _ = require("lodash")
+const matter = require("gray-matter")
 const { minify: htmlMinify } = require("html-minifier")
 
 marked.setOptions({
@@ -15,19 +17,26 @@ marked.setOptions({
   xhtml: false,
 })
 
+_.templateSettings.interpolate = /{{([\s\S]+?)}}/g
+
 const PROD = process.env.NODE_ENV === "production"
 const BUILD = path.join(__dirname, "build")
 const SRC = path.join(__dirname, "src")
 
-const ifCond = (cond, fn) => (value) => (cond ? fn(value) : value)
+const ifCond = (cond, ...fns) => (value) =>
+  cond ? fns.reduce((acc, fn) => fn(acc), value) : value
 
 const readSrcFile = (f) => fs.readFile(path.join(SRC, f), "utf8")
 
 const mdToHtml = async (name) => {
   const template = await readSrcFile("template.html")
-  const header = marked(await readSrcFile("_header.md"))
-  const content = marked(await readSrcFile(name))
-  return template.replace("<!--MARKDOWN-->", header + content)
+  const header = matter(await readSrcFile("_header.md"))
+  const body = matter(await readSrcFile(name))
+  return _.template(template)({
+    ...header.data,
+    ...body.data,
+    content: marked(header.content + body.content),
+  })
 }
 
 const cacheBust = (value) =>
@@ -53,9 +62,8 @@ const main = async () => {
   await Promise.all(
     markdownFiles.map((name) =>
       mdToHtml(name)
-        .then(ifCond(!PROD, cacheBust))
+        .then(ifCond(!PROD, cacheBust, liveReload))
         .then(ifCond(PROD, minify))
-        .then(ifCond(!PROD, liveReload))
         .then(orphans)
         .then((value) => writeFile(name.replace(/\.md$/, ".html"), value))
     )
