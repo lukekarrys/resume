@@ -16,6 +16,7 @@
     "html-minifier": "^4.0.0",
     "husky": "^4.2.3",
     "lint-staged": "^10.1.1",
+    "livereload": "^0.9.1",
     "marked": "^0.8.2",
     "micro": "^9.3.4",
     "mkdirp": "^1.0.3",
