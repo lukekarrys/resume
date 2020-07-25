@@ -4,7 +4,7 @@ title: Resume
 
 ## Web Application Developer
 
-I'm a web app developer who is at home anywhere in a project from the API to the UX. I enjoy diving deep into problems as part of a team and coming up with solutions that weigh all the tradeoffs and commit to the best path forward.
+I'm a web app developer who is at home anywhere in a project from the API to the UX. I enjoy diving deep into problems as part of a team and coming up with solutions that weigh the tradeoffs and commit to the best path forward.
 
 My goal is to find a position that allows me to creatively solve problems and share my experience while continuing to learn and grow as a developer and person.
 
@@ -35,10 +35,10 @@ Above all, I believe that software is about people.
 
 #### Developed web applications for clients and internally using Node.js and a variety of frontend technologies
 
-- Architected and developed migration of Heroku's pricing application from jQuery to React
-- Led React Native development and deployment of a realtime video and chat app for prototype social network
+- Architected and developed migration of Heroku's pricing application from jQuery to React and Redux
+- Led React Native and Redux/Firebase development and deployment of a realtime video and chat app for prototype social network
 - Led frontend development of multi-platform web app for CAA's music clients to route worldwide tours
-- Developed the frontend and API for the Node Security Platform's public and admin interfaces
+- Developed the frontend and parts of the API for the Node Security Platform's public and admin interfaces
 
 ### Frontend Developer – [meltmedia](https://meltmedia.com) – Feb 2011-Jan 2013
 
