@@ -1,3 +1,4 @@
 node_modules/
 build/
 .netlify
+src/cover_*.md
