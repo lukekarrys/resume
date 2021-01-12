@@ -35,7 +35,9 @@ const mdToHtml = async (name) => {
   return _.template(template)({
     ...header.data,
     ...body.data,
-    content: marked(header.content + body.content),
+    content: marked(
+      header.content + body.content.split("<!-- more -->")[0].trim()
+    ),
   })
 }
 
