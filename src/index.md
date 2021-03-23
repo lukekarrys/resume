@@ -1,7 +1,3 @@
----
-title: Resume
----
-
 ## Web Application Developer
 
 I'm a web app developer who is at home anywhere in a project from the API to the UX. I enjoy diving deep into problems as part of a team and coming up with solutions that weigh the tradeoffs and commit to the best path forward.

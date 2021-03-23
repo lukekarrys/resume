@@ -1,14 +1,20 @@
 const path = require("path")
-const fs = require("fs").promises
+const { promises: fs, existsSync } = require("fs")
 const playwright = require("playwright")
 const detect = require("detect-port-alt")
-const matter = require("gray-matter")
 const { createServer, PORT } = require("./server")
 
 const BUILD = path.join(__dirname, "build")
 
-const savePdf = async ({ port, page, name, title }) => {
+const savePdf = async ({ port, page, name }) => {
   await page.goto(`http://localhost:${port}/${name}`)
+  let title = (await page.title()).replace(" | Luke Karrys", "")
+  const pdfPath = path.join(BUILD, `${title} – Luke Karrys.pdf`)
+
+  if (existsSync(pdfPath)) {
+    title += ` ${path.basename(name, ".html").replace("cover_", "")}`
+  }
+
   await page.pdf({
     path: path.join(BUILD, `${title} – Luke Karrys.pdf`),
     printBackground: true,
@@ -41,16 +47,10 @@ const main = async () => {
     const page = await context.newPage()
 
     for (const file of files) {
-      const { data } = matter(
-        await fs.readFile(
-          path.join("./src", `${path.basename(file, ".html")}.md`)
-        )
-      )
       await savePdf({
         port: PORT,
         page,
         name: file,
-        title: data.title,
       })
     }
     cleanup()

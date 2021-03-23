@@ -32,12 +32,18 @@ const mdToHtml = async (name) => {
   const template = await readSrcFile("template.html")
   const header = matter(await readSrcFile("_header.md"))
   const body = matter(await readSrcFile(name))
+  const isCover = name.startsWith("cover_")
+
+  const headerContent = header.content.trim() + (isCover ? "\n\n<hr>\n\n" : "")
+  const bodyContent = body.content.split("<!-- more -->")[0].trim()
+  const footerContent = isCover ? "\n\n– Luke Karrys" : ""
+  const content = [headerContent, bodyContent, footerContent].join("\n")
+
   return _.template(template)({
+    title: isCover ? "Cover Letter" : "Resume",
     ...header.data,
     ...body.data,
-    content: marked(
-      header.content + body.content.split("<!-- more -->")[0].trim()
-    ),
+    content: marked(content),
   })
 }
 
