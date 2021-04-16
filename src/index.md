@@ -72,7 +72,7 @@ Above all, I believe that software is about people.
 - Wrote custom tooling to ease developer experience in writing, managing, and deploying projects
 - Developed game logic using AS3, PHP and JS to create isometric Flash games for deployment to Facebook
 
-### Web Developer – Mosaic Team – Dec 2008-Feb 2010
+### Web Developer – Mosaic Team – Feb 2008-Feb 2010
 
 <div class="skills">
 
@@ -85,11 +85,11 @@ Above all, I believe that software is about people.
 
 #### Developed frontend and backend solutions for small business clients using PHP and JavaScript
 
-- Created custom season ticketing web applicatioin for local theaters
+- Created custom season ticketing web application for local theaters
 - Developed template editor for clients to customize off-the-shelf small business sites
 
 ## Education
 
 ### University of Advancing Technology – Sep 2005-Dec 2008
 
-#### Bachelor of Science (Cum Ladue) in Software Engineering with an emphasis in Web Programming
+#### Bachelor of Science (Cum Laude) in Software Engineering with an emphasis in Web Programming
