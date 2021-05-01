@@ -10,7 +10,7 @@ Above all, I believe that software is about people.
 
 ## Work Experience
 
-### JavaScript Developer – [&yet](https://andyet.com) – Jan 2013-Present
+### JavaScript Developer – [&yet](https://andyet.com) – Jan 2013-April 2021
 
 <div class="skills">
 
