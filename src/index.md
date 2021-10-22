@@ -10,6 +10,16 @@ Above all, I believe that software is about people.
 
 ## Work Experience
 
+### Senior Software Engineer - [GitHub](https://github.com)  – June 2021-Present
+
+<div class="skills">
+- npm
+</div>
+
+#### Worked on the npm cli
+
+- Bugs, features, planning, pull requests and released
+
 ### JavaScript Developer – [&yet](https://andyet.com) – Jan 2013-April 2021
 
 <div class="skills">
