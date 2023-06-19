@@ -1,10 +1,10 @@
 ## Web Application Developer
 
-I'm a web app developer who is at home anywhere in a project from the API to the UX. I enjoy diving deep into problems as part of a team and coming up with solutions that weigh the tradeoffs and commit to the best path forward.
+I'm a Software Engineer who is at home anywhere in a project from the API to the UX. I enjoy diving deep into problems as part of a team and coming up with solutions that weigh the tradeoffs and commit to the best path forward.
 
 My goal is to find a position that allows me to creatively solve problems and share my experience while continuing to learn and grow as a developer and person.
 
-I'm happy with React and Node for building great web apps, but I'm open to any technology that allows me to create exceptional user experiences. I believe no detail is too small to try and get right. I've worked as a member of a distributed team for over 8 years and pride myself on my teamwork and diligent written and verbal communication.
+I've been happy using all flavors of JavaScript to build software for the last 15+ years, but I'm open to any technology that allows me to create exceptional user experiences. I believe no detail is too small to try and get right. I've worked as a member of a distributed team for over 10 years and pride myself on my teamwork and diligent written and verbal communication. My super power is the ability to fully understand complex systems, and distill my thoughts into actions that I can share to ensure the best technical decision is made and documented.
 
 Above all, I believe that software is about people.
 
@@ -13,12 +13,26 @@ Above all, I believe that software is about people.
 ### Senior Software Engineer - [GitHub](https://github.com)  – June 2021-Present
 
 <div class="skills">
+
 - npm
+- Node
+- JavaScript
+- Open Source
+- RFCs
+
 </div>
 
 #### Worked on the npm cli
 
-- Bugs, features, planning, pull requests and released
+- Implemented automated release management for packages totaling 4B monthly downloads
+- Participated in a public RFC process including writing many RFCs
+- Created an automated process to sync all necessary changes between ~80 projects
+- Shipped a public automated statusboard to track custom engineering metrics
+- Responded to and fixed security vulnerabilities reported via our Bug Bounty
+- Wrote a new playbook for responding to and triaging open source issues
+- Worked with community members to review and ship their pull request contributions
+- Shipped major versions 8 and 9 of the npm CLI
+- Became a Node.js core collaborator and ship a new modern version of node-gyp
 
 ### JavaScript Developer – [&yet](https://andyet.com) – Jan 2013-April 2021
 
