@@ -10,7 +10,7 @@ Above all, I believe that software is about people.
 
 ## Work Experience
 
-### Senior Software Engineer - [GitHub](https://github.com)  – June 2021-Present
+### Senior Software Engineer - [GitHub](https://github.com) – June 2021-Present
 
 <div class="skills">
 
@@ -22,7 +22,7 @@ Above all, I believe that software is about people.
 
 </div>
 
-#### Worked on the npm cli
+#### Shipped major updates to the npm CLI, its release process, and all its open source dependencies
 
 - Implemented automated release management for packages totaling 4B monthly downloads
 - Participated in a public RFC process including writing many RFCs
