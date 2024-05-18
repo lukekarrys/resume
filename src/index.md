@@ -10,7 +10,7 @@ Above all, I believe that software is about people.
 
 ## Work Experience
 
-### Senior Software Engineer - [GitHub](https://github.com) – June 2021-Present
+### Senior Software Engineer - [GitHub](https://github.com) – June 2021-May 2024
 
 <div class="skills">
 
